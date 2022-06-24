@@ -1,10 +1,5 @@
 import React from 'react'
 import { ListItem, ListItemText, ListItemAvatar, Avatar, TextField, Button } from '@material-ui/core';
-// import SendIcon from '@mui/icons-material/Send';
-// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import MapsUgcOutlinedIcon from '@mui/icons-material/MapsUgcOutlined';
-// import BookmarkAddOutlinedIcon from '@mui/icons-material/BookmarkAddOutlined';
-// import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import "../style/Post.css";
 
 import Comments from './Comments';
