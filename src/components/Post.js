@@ -25,7 +25,6 @@ function Post() {
              
                 <div className="post__comments">
                     <Comments/>
-                  
                 </div>
             
         </div>
