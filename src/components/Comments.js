@@ -29,8 +29,8 @@ function Comments() {
 
   const url="https://jsonplaceholder.typicode.com/posts"
      const classes = useStyles();
-  useEffect(()=>{
-    fetch(url)
+     useEffect(()=>{
+     fetch(url)
     .then(response=>response.json()).then(json=>{
       console.log("jasonnnn",json)
       setData(json)
@@ -40,13 +40,12 @@ function Comments() {
   },[])
 
   //POST REQUEST
- const [body,setBody]=useState("");
- function saveBody()
- {
-  let data={body}
+   const [body,setBody]=useState("");
+   function saveBody()
+   {
+   let data={body}
  
-
-  fetch("https://jsonplaceholder.typicode.com/posts", {
+   fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     headers: {
       'Accept': 'application/json',
@@ -80,7 +79,7 @@ function Comments() {
       <ListItemAvatar>
         <Avatar alt="Remy Sharp" src="https://images.unsplash.com/photo-1609220361638-14ceb45e5e1e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" />
       </ListItemAvatar>
-      <ListItemText
+    <ListItemText
         primary="comments"
         secondary={
           <React.Fragment>
@@ -90,26 +89,26 @@ function Comments() {
               className={classes.inline}
               color="textPrimary"
             >
-           <form className="post__form">
-                    <TextField
-                    value={body}
-                    onChange={(e)=>{setBody(e.target.value)}}
-                     label="add comment"
-                     size="small"
-                     variant="outlined"
-                     className="post__input"
-                     placeholder="add comment"
-                    />
-                     <Button
-                     onClick={saveBody}
-                        variant="contained"
-                        size="small"
-                        type="submit"
+      <form className="post__form">
+                <TextField
+                 value={body}
+                 onChange={(e)=>{setBody(e.target.value)}}
+                 label="add comment"
+                 size="small"
+                 variant="outlined"
+                 className="post__input"
+                 placeholder="add comment"
+                  />
+                  <Button
+                  onClick={saveBody}
+                  variant="contained"
+                   size="small"
+                  type="submit"
                        
-                    > <SendIcon/>
-                        Send
-                    </Button>
-                </form>
+                   > <SendIcon/>
+                      Send
+                   </Button>
+        </form>
 
   <div className="Comments">
   <table border="0">
@@ -123,25 +122,25 @@ function Comments() {
           <Button
               onClick={()=>deleteuser(item.id)
                }
-                variant="contained"
-                 size="small"
-                 type="submit"
+               variant="contained"
+               size="small"
+               type="submit"
                    >
-                  Delete
-                 </Button>
+                Delete
+          </Button>
           </td>
           </tr>
           )
         }
-       </tbody>
-      </table> 
+    </tbody>
+    </table> 
  
 </div>
-         </Typography>
-        </React.Fragment>
+     </Typography>
+     </React.Fragment>
         }
       />
-    </ListItem>
+  </ListItem>
     <Divider variant="inset" component="li" />  
   </List>
  
